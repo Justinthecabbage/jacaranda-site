@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Community — Jacaranda Music Club</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <style>.hidden { display: none !important; }</style>
+</head>
+<body>
+
+<nav>
+    <div class="nav-wrap">
+        <div class="logo-bar">
+            <a href="../index.html"><img src="../clubLogo.png" alt="Club Logo"></a>
+            <span>Jacaranda Music Club</span>
+        </div>
+        <div class="nav-menu">
+            <a href="../index.html">Home</a>
+            <a href="community.html">Community</a>
+            <a href="song-request.html">Song Board</a>
+            <div class="nav-auth">
+                <span class="nav-user" id="nav-user"></span>
+                <a href="login.html" class="btn-nav btn-nav-outline" id="nav-login">Log In</a>
+                <a href="register.html" class="btn-nav btn-nav-solid" id="nav-register">Sign Up</a>
+                <a href="#" class="btn-nav btn-nav-outline" id="nav-logout" style="display:none">Log Out</a>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<div class="page-header">
+    <h1>Community</h1>
+    <p>Share posts and connect with fellow music lovers</p>
+</div>
+
+<div class="container">
+    <div id="alert-box"></div>
+
+    <div class="card">
+        <h2 class="section-title" style="font-size:1.4rem;margin-bottom:1.5rem">New Post</h2>
+        <form id="post-form">
+            <div class="form-group">
+                <label for="post-title">Title</label>
+                <input type="text" id="post-title" placeholder="Post title" required maxlength="100">
+            </div>
+            <div class="form-group">
+                <label for="post-content">Content</label>
+                <textarea id="post-content" placeholder="What's on your mind?" required maxlength="2000"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Publish</button>
+        </form>
+    </div>
+
+    <div class="card">
+        <h2 class="section-title" style="font-size:1.4rem;margin-bottom:1.5rem">Recent Posts</h2>
+        <div id="posts-list">
+            <div class="empty-state">Loading…</div>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <p>© 2025 Jacaranda Music Club | Sino-US Curriculum Program of Hefei No.1 High School</p>
+</footer>
+
+<script src="../js/config.js"></script>
+<script type="module">
+    import { initNavAuth } from '../js/auth.js';
+    import { initCommunityPage } from '../js/community.js';
+    initNavAuth();
+    initCommunityPage();
+</script>
+<script type="module" src="../js/agent-widget.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jacaranda Music Club</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<nav>
+    <div class="nav-wrap">
+        <div class="logo-bar">
+            <img src="clubLogo.png" alt="Club Logo">
+            <span>Jacaranda Music Club</span>
+        </div>
+        <div class="nav-menu">
+            <a href="#home">Home</a>
+            <a href="pages/community.html">Community</a>
+            <a href="pages/song-request.html">Song Board</a>
+            <div class="nav-auth">
+                <span class="nav-user" id="nav-user"></span>
+                <a href="pages/login.html" class="btn-nav btn-nav-outline" id="nav-login">Log In</a>
+                <a href="pages/register.html" class="btn-nav btn-nav-solid" id="nav-register">Sign Up</a>
+                <a href="#" class="btn-nav btn-nav-outline" id="nav-logout" style="display:none">Log Out</a>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<section class="hero hero-home" id="home">
+    <div class="hero-text">
+        <h1>Jacaranda Music Club</h1>
+        <p>Founded on November 13, 2025 | Sino-US Curriculum Program of Hefei No.1 High School</p>
+    </div>
+</section>
+
+<div class="container">
+    <h2 class="section-title">Our Moments</h2>
+    <div class="photo-grid">
+        <div class="photo-card"><img src="m1.png" alt="Moments"></div>
+        <div class="photo-card"><img src="m5.jpg" alt="Moments"></div>
+        <div class="photo-card"><img src="m3.png" alt="Moments"></div>
+        <div class="photo-card"><img src="m4.png" alt="Moments"></div>
+        <div class="photo-card"><img src="m2.png" alt="Moments"></div>
+        <div class="photo-card"><img src="m6.jpg" alt="Moments"></div>
+        <div class="photo-card"><img src="m7.jpg" alt="Moments"></div>
+        <div class="photo-card"><img src="m8.jpg" alt="Moments"></div>
+        <div class="photo-card"><img src="m9.jpg" alt="Moments"></div>
+    </div>
+</div>
+
+<div class="container" id="join">
+    <div class="join-wrap join-home">
+        <h2>Join Us</h2>
+        <p>Embrace the charm of music</p>
+        <p>We welcome all music lovers</p>
+        <p>Join our family via QQ Group</p>
+        <p>Group Number: 824329430</p>
+        <p style="margin-top:1.5rem">
+            <a href="pages/register.html" class="btn btn-primary join-btn">Create an Account</a>
+        </p>
+    </div>
+</div>
+
+<footer>
+    <p>© 2025 Jacaranda Music Club | Sino-US Curriculum Program of Hefei No.1 High School</p>
+</footer>
+
+<script>
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
+    });
+});
+</script>
+<script src="js/config.js"></script>
+<script type="module">
+    import { initNavAuth } from './js/auth.js';
+    initNavAuth();
+</script>
+<script type="module" src="js/agent-widget.js"></script>
+
+</body>
+</html>

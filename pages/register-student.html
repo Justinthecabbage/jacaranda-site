@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Sign Up — Jacaranda Music Club</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+
+<nav>
+    <div class="nav-wrap">
+        <div class="logo-bar">
+            <a href="../index.html"><img src="../clubLogo.png" alt="Club Logo"></a>
+            <span>Jacaranda Music Club</span>
+        </div>
+        <div class="nav-menu">
+            <a href="../index.html">Home</a>
+            <a href="community.html">Community</a>
+            <a href="song-request.html">Song Board</a>
+        </div>
+    </div>
+</nav>
+
+<div class="page-header">
+    <h1>Student Sign Up</h1>
+    <p>Verify your email to access the Song Board and Community</p>
+</div>
+
+<div class="auth-container">
+    <div id="alert-box"></div>
+    <div class="card">
+        <div class="role-tabs">
+            <a href="register-student.html" class="role-tab active">Student</a>
+            <a href="register-teacher.html" class="role-tab">Teacher</a>
+        </div>
+        <form id="register-form">
+            <div class="form-group">
+                <label for="display-name">Display Name</label>
+                <input type="text" id="display-name" placeholder="How others see you" required maxlength="30">
+            </div>
+            <div class="form-group">
+                <label for="student-id">Student ID</label>
+                <input type="text" id="student-id" placeholder="e.g. 2847" required maxlength="4" inputmode="numeric" pattern="[0-9]{4}">
+                <p class="form-hint">4 digits, first digit must be 2 or 3</p>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" placeholder="student@example.com" required>
+                <p class="form-hint">A verification link will be sent to this address</p>
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" placeholder="At least 6 characters" required minlength="6">
+            </div>
+            <div class="form-group">
+                <label for="confirm-password">Confirm Password</label>
+                <input type="password" id="confirm-password" placeholder="Re-enter password" required>
+            </div>
+            <button type="submit" class="btn btn-primary" style="width:100%">Create Student Account</button>
+        </form>
+        <div class="auth-links">
+            Already have an account? <a href="login.html">Log In</a>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <p>© 2025 Jacaranda Music Club | Sino-US Curriculum Program of Hefei No.1 High School</p>
+</footer>
+
+<script src="../js/config.js"></script>
+<script type="module">
+    import { initStudentRegisterPage } from '../js/auth.js';
+    initStudentRegisterPage();
+</script>
+<script type="module" src="../js/agent-widget.js"></script>
+
+</body>
+</html>
