@@ -11,8 +11,8 @@ window.JMC_BASE = detectBasePath();
 
 window.JMC_CONFIG = {
     supabase: {
-        url: 'YOUR_SUPABASE_URL',
-        anonKey: 'YOUR_SUPABASE_ANON_KEY'
+        url:"https://drmrzplznhhwrpskucem.supabase.co",
+        anonKey: “sb_publishable_MVMLcIZq1cu6u1TswSpWcg_BLs_dDdG”
     },
 
     allowedEmailDomains: [],
