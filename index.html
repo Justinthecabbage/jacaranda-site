@@ -74,13 +74,14 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
     });
 });
-</script>
 <script src="js/config.js"></script>
-<script type="module">
-    import { initNavAuth } from './js/auth.js';
-    initNavAuth();
-</script>
-<script type="module" src="js/agent-widget.js"></script>
 
-</body>
-</html>
+<script type="module">
+import { initNavAuth } from './js/auth.js';
+
+console.log("CONFIG CHECK:", window.JMC_CONFIG);
+
+initNavAuth();
+</script>
+
+<script type="module" src="js/agent-widget.js"></script>
