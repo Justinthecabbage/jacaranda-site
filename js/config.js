@@ -1,5 +1,3 @@
-// Jacaranda Music Club — configuration
-
 function detectBasePath() {
     const p = window.location.pathname;
     if (p.includes('/pages/')) return p.split('/pages/')[0];
@@ -14,6 +12,7 @@ window.JMC_CONFIG = {
         anonKey: "sb_publishable_MVMLcIZq1cu6u1TswSpWcg_BLs_dDdG"
     },
 
+    allowedEmailDomains: [],
 
     ai: {
         proxyUrl: '',
