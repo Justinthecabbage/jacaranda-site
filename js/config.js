@@ -18,7 +18,7 @@ window.JMC_CONFIG = {
 
     ai: {
         proxyUrl: '',
-        welcomeMessage: 'Hi! I\'m the Jacaranda Music Club assistant.\n\nAsk me about joining the club, the Song Board, community posts, or how to sign up!'
+        welcomeMessage: "Hi! I'm the Jacaranda Music Club assistant.\n\nAsk me about joining the club, the Song Board, community posts, or how to sign up!"
     }
 };
 
