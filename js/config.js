@@ -14,7 +14,6 @@ window.JMC_CONFIG = {
         anonKey: "sb_publishable_MVMLcIZq1cu6u1TswSpWcg_BLs_dDdG"
     },
 
-    allowedEmailDomains: [],
 
     ai: {
         proxyUrl: '',
