@@ -19,10 +19,10 @@ function validateEmail(email) {
 
 function validateStudentId(studentId) {
     if (!/^\d{4}$/.test(studentId)) {
-        return 'Student ID must be exactly 4 digits.';
+        return 'invalid Student ID';
     }
     if (studentId[0] !== '2' && studentId[0] !== '3') {
-        return 'Student ID must start with 2 or 3.';
+        return 'invalid Student ID';
     }
     return null;
 }
